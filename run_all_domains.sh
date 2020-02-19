@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ -n "$1"]
+if [ -n "$1" ]
 then
-	domain="nordpresse.be"
+	domain="letour.fr"
 else
 	domain=$1
 fi

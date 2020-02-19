@@ -14,7 +14,7 @@ fi
 for record in A NS SOA HINFO MINFO MX TXT RP SIG KEY AAAA LOC SRV CERT SSHFP IPSECKEY RRSIG NSEC DNSKEY NSEC3 TLSA OPENPGPKEY SPF URI CAA
 do
     echo -e "Querying ${record} DNS record for ${domain}"
-    dig +noall +answer +ttlid -t ${record} ${resolver} ${domain}
+    dig +multiline +noall +answer +ttlid -t ${record} ${resolver} ${domain}
     sleep 1 #Necessary for some reason
 done
 
